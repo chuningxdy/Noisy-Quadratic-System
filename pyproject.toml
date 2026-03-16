@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nqs"
+version = "0.1.0"
+description = "Noisy Quadratic System model for predicting LLM training loss"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+
+dependencies = [
+    "jax==0.4.35",
+    "jaxlib==0.4.34",
+    "numpy==1.26.4",
+    "scipy==1.13.0",
+    "matplotlib==3.8.4",
+]
+
+[project.optional-dependencies]
+cuda = [
+    "jax[cuda12]==0.4.35",
+    "nvidia-cuda-nvcc-cu12==12.4.131",
+]
+
+[tool.setuptools.packages.find]
+include = ["nqs*"]
