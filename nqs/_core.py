@@ -12,6 +12,7 @@ Expected risk decomposes as:
 """
 
 import jax
+import numpy as np
 jax.config.update("jax_enable_x64", True)
 import jax.numpy as jnp
 if not (jnp.array(1.).dtype is jnp.dtype("float64")):
@@ -134,7 +135,7 @@ def _e_appx_no_sch(nqs, cfg_array):
 #            Numerical Integration (Quadrature + EM)       #
 # -------------------------------------------------------- #
 
-_GAUSS_LEGENDRE_20_X, _GAUSS_LEGENDRE_20_W = jnp.polynomial.legendre.leggauss(20)
+_GAUSS_LEGENDRE_20_X, _GAUSS_LEGENDRE_20_W = np.polynomial.legendre.leggauss(20)
 _GAUSS_LEGENDRE_20_X, _GAUSS_LEGENDRE_20_W = jnp.array(_GAUSS_LEGENDRE_20_X), jnp.array(_GAUSS_LEGENDRE_20_W)
 
 def _jax_quad(f, a, b):
