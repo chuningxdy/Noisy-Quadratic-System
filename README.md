@@ -1,4 +1,4 @@
-# Predicting Large Model Test Losses with a Noisy Quadratic System (NQS)
+# NQS: Predicting Large Model Test Losses with a Noisy Quadratic System
 
 This is the accompanying code for the paper [Predicting Large Model Test Losses with a Noisy Quadratic System](https://arxiv.org/abs/2605.09154v1).
 
