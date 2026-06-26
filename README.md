@@ -1,6 +1,15 @@
 # NQS: Predicting Large Model Test Losses with a Noisy Quadratic System
 
-This is the accompanying code for the [NQS project](https://www.cs.toronto.edu/~cmaddis/projects/nqs.html), paper at [Predicting Large Model Test Losses with a Noisy Quadratic System](https://arxiv.org/abs/2605.09154v1).
+
+## Introduction
+
+*Check out our project page [NQS project](https://www.cs.toronto.edu/~cmaddis/projects/nqs.html)!*
+
+
+
+## Background
+
+This is the accompanying code for [Predicting Large Model Test Losses with a Noisy Quadratic System](https://arxiv.org/abs/2605.09154v1).
 
 This package implements the Noisy Quadratic System (NQS) model for predicting the pre-training loss of large language models (LLMs). Like Chinchilla scaling laws, NQS must first be fitted to a set of observed training runs (varying model size, batch size, and training steps) to learn the scaling parameters for a given model family and dataset. Once fitted, it predicts the expected training loss for any combination of these hyperparameters without running the actual training. This enables practitioners to explore scaling trade-offs, plan compute-optimal training configurations, and estimate model performance across a wide range of scales before committing GPU resources.
 
